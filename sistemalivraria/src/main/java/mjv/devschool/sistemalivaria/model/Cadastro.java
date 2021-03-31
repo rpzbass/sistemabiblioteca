@@ -1,10 +1,9 @@
 package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -23,6 +20,7 @@ public class Cadastro  implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
 	
 	private String nome;
@@ -31,18 +29,18 @@ public class Cadastro  implements Serializable {
 	private String telefone;
 	private String login;
 	private String senha;
+
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "endereco_id",referencedColumnName = "id")
-	private Endereco endereco;
-	
+	@JoinColumn(name = "endereco_id", referencedColumnName="id")
+	Endereco endereco = new Endereco();
 
 
 	public Cadastro() {
 		
 	}
 	
-	public Cadastro(Long id, String nome, String cpf, String email, String telefone, String login, String senha) {
+	public Cadastro(Long id, String nome, String cpf, String email, String telefone, String login, String senha ) {
 		
 		this.id = id;
 		this.nome = nome;
@@ -50,9 +48,9 @@ public class Cadastro  implements Serializable {
 		this.email = email;
 		this.telefone = telefone;
 		this.login = login;
+		this.senha = senha;
+		//BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 		
-		BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
-		this.senha = enc.encode(senha);
 	}
 
 	
@@ -61,8 +59,10 @@ public class Cadastro  implements Serializable {
 	}
 
 	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	   this.getEndereco().setBairro(endereco.getBairro());
+	  
 	}
+	
 
 	public Long getId() {
 		return id;

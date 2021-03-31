@@ -1,0 +1,49 @@
+package mjv.devschool.sistemalivaria.resource;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import mjv.devschool.sistemalivaria.dto.CadastroDto;
+import mjv.devschool.sistemalivaria.service.CadastroService;
+
+
+@RestController
+@RequestMapping(value = "/cadastro")
+public class CadastroResource {
+	
+	@Autowired
+	private CadastroService cadservice;
+	
+	
+	
+	@GetMapping
+	public ResponseEntity<List<CadastroDto>> findAll(){
+	
+		List<CadastroDto> list = cadservice.findAll();
+	
+		return ResponseEntity.ok().body(list);
+	}
+	
+	/*
+	
+	@PostMapping
+	public ResponseEntity<CadastroDto> insert(@RequestBody CadastroDto dto){
+		
+		
+		dto = cadservice.insert(dto);
+		
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
+		
+		
+		return ResponseEntity.created(uri).body(dto);
+
+		
+	}
+	*/
+	
+}

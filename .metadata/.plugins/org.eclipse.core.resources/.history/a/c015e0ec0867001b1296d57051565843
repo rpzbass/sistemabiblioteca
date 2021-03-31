@@ -1,0 +1,22 @@
+package com.casadeapostas.sorteio.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.stereotype.Repository;
+
+import com.casadeapostas.sorteio.entities.Cliente;
+
+
+
+@Repository
+public interface  ClienteRepository extends JpaRepository<Cliente,Long> {
+
+	
+	/*@Query("select case when count(c)> 0 then true else false end from Car c where lower(c.model) like lower(:model)")
+	boolean existsCarLikeCustomQuery(@Param("email") String email);
+	*/
+}
+
+
+
+	

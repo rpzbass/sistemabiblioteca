@@ -2,6 +2,7 @@ package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,7 @@ public class Endereco implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
 	
 	private String cep;
@@ -25,14 +27,17 @@ public class Endereco implements Serializable {
 	private String bairro;
 	private String localidade;
 	private String uf;
-	private Integer ibge;
+	private String ibge;
+	
+
+	
 	
 	public Endereco() {
 	
 		
 	}
 	
-	public Endereco(Long id, String cep, String logradouro, String bairro, String localidade, String uf, Integer ibge) {
+	public Endereco(Long id, String cep, String logradouro, String bairro, String localidade, String uf, String ibge) {
 		
 		this.id = id;
 		this.cep = cep;
@@ -92,11 +97,11 @@ public class Endereco implements Serializable {
 		this.uf = uf;
 	}
 
-	public Integer getIbge() {
+	public String getIbge() {
 		return ibge;
 	}
 
-	public void setIbge(Integer ibge) {
+	public void setIbge(String ibge) {
 		this.ibge = ibge;
 	}
 	

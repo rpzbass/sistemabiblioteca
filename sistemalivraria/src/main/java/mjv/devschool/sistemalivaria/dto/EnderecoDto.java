@@ -2,6 +2,9 @@ package mjv.devschool.sistemalivaria.dto;
 
 import java.io.Serializable;
 
+import mjv.devschool.sistemalivaria.model.Endereco;
+
+
 public class EnderecoDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -14,11 +17,11 @@ public class EnderecoDto implements Serializable {
 	private String bairro;
 	private String localidade;
 	private String uf;
-	private Integer ibge;
+	private String ibge;
 	
 	
 	
-	public EnderecoDto() {
+	public EnderecoDto( ) {
 		
 	}
 	
@@ -28,8 +31,24 @@ public class EnderecoDto implements Serializable {
 		this.cep = cep;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
+		this.localidade = localidade;
+		this.uf = uf;
+		this.ibge = ibge;
 		
 	}
+	
+	public EnderecoDto(Endereco entidade) {
+	   
+	   this.id =  entidade.getId();
+	   this.cep = entidade.getCep();
+	   this.logradouro = entidade.getLogradouro();
+	   this.bairro = entidade.getBairro();
+	   this.localidade = entidade.getBairro();
+	   this.uf = entidade.getUf();
+	   this.ibge = entidade.getIbge();
+	   
+	}
+	
 
 	public Long getId() {
 		return id;
@@ -79,11 +98,11 @@ public class EnderecoDto implements Serializable {
 		this.uf = uf;
 	}
 
-	public Integer getIbge() {
+	public String getIbge() {
 		return ibge;
 	}
 
-	public void setIbge(Integer ibge) {
+	public void setIbge(String ibge) {
 		this.ibge = ibge;
 	}
 	

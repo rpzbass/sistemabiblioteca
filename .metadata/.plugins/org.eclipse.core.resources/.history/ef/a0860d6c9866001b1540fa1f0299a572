@@ -1,0 +1,102 @@
+package com.casadeapostas.sorteio.services;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+
+import com.casadeapostas.sorteio.dto.ClienteDTO;
+import com.casadeapostas.sorteio.entities.Aposta;
+import com.casadeapostas.sorteio.entities.Cliente;
+import com.casadeapostas.sorteio.repositories.ApostaRepository;
+import com.casadeapostas.sorteio.repositories.ClienteRepository;
+
+@Service
+public class ClienteService {
+
+	@Autowired
+	private ClienteRepository clienterepository;
+	
+	@Autowired
+	private ApostaRepository apostarepository;
+	
+	
+	@Transactional
+	public Page<ClienteDTO> findAllPaged(PageRequest pageRequest){
+		
+		Page<Cliente> list = clienterepository.findAll(pageRequest);
+
+		return list.map(read -> new ClienteDTO(read));
+		
+	}
+	
+	public ClienteDTO insert(ClienteDTO dto) {
+		
+		Cliente entity = new Cliente();
+		copyDtoToEntity(dto,entity);
+		entity = clienterepository.save(entity);
+		return new ClienteDTO(entity);
+	}
+	
+	
+	
+	
+	private void copyDtoToEntity(ClienteDTO dto,Cliente entity) {
+		
+		String result = randomNum();
+		entity.setName(dto.getNome());
+		entity.setEmail(dto.getEmail());
+		Aposta entit = new Aposta();
+		
+		entity.getApostas().add(entit.setSorteio(result)););
+		
+	}
+ 	
+	
+	private String randomNum() {
+
+		Integer[] numbers = new Integer[6];
+
+		for (int i = 0; i < 6; i++) {
+
+			numbers[i] = (int) (Math.random() * 60) + 1;
+
+		}
+
+		for (int l = 0; l < 6; l++) {
+
+			for (int c = 0; c < 6; c++) {
+
+				while (numbers[c] == numbers[l] && c != l) {
+
+					numbers[c] = (int) (Math.random() * 60) + 1;
+
+				}
+
+			}
+
+		}
+
+		StringBuilder str = new StringBuilder();
+		String result = null;
+		for (Integer line : numbers) {
+
+			str.append(line.toString()+" ");
+
+		}
+		result = str.toString();
+		return result;
+
+	}
+	
+	
+	
+
+}
+	
+	
+	
+	
+

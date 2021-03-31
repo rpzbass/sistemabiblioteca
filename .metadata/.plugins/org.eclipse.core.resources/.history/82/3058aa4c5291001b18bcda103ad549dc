@@ -1,0 +1,6 @@
+INSERT INTO tb_cadastro(id,nome,cpf,email,telefone,login,senha,endereco_id)
+VALUES(1,'joaodascoves','4545454','coves@coves', '666666','nickname','tiotedy',1);
+INSERT INTO tb_endereco(id,cep, logradouro, bairro,localidade,uf,ibge,cadastro_id)
+values(1,'82000021', 'Rua dos devs','colombo','curitiba','pr','45465',1);
+
+		

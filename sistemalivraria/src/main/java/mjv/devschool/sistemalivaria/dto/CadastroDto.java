@@ -18,17 +18,19 @@ public class CadastroDto implements Serializable{
 	private String login;
 	private String senha;
 	
-	EnderecoDto enderecDto;
 	
-
+	EnderecoDto enderecoDto = new EnderecoDto();
+	
+	
 	public CadastroDto() {
 		
 	}
 	
-	public CadastroDto(Long id, String nome,String cpf,String telefone,String login,String senha) {
+	public CadastroDto(Long id, String nome,String email,String cpf,String telefone,String login,String senha) {
 		
 		this.id = id;
 		this.nome = nome;
+		this.email = email;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.login = login;
@@ -40,22 +42,25 @@ public class CadastroDto implements Serializable{
 		
 		this.id = entidade.getId();
 		this.nome = entidade.getNome();
+		this.email = entidade.getEmail();
 		this.cpf = entidade.getCpf();
 		this.telefone = entidade.getTelefone();
 		this.login = entidade.getLogin();
 		this.senha = entidade.getSenha();
+
 		
 	}
 	
-	
-	
 
-	public EnderecoDto getEnderecDto() {
-		return enderecDto;
+
+	public EnderecoDto getEnderecoDto() {
+		return enderecoDto;
 	}
 
-	public void setEnderecDto(EnderecoDto enderecDto) {
-		this.enderecDto = enderecDto;
+	public void setEnderecoDto(EnderecoDto enderecoDto) {
+		EnderecoDto end = new EnderecoDto();
+		end.setBairro(enderecoDto.getBairro());
+		
 	}
 
 	public Long getId() {
@@ -66,6 +71,7 @@ public class CadastroDto implements Serializable{
 		this.id = id;
 	}
 
+	
 	public String getNome() {
 		return nome;
 	}
@@ -114,13 +120,6 @@ public class CadastroDto implements Serializable{
 		this.senha = senha;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
