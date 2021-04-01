@@ -2,17 +2,14 @@ package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -26,6 +23,7 @@ public class Locacao implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
 	
 	private Date dataAgendamento;
@@ -37,18 +35,43 @@ public class Locacao implements Serializable {
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cadastro_id",referencedColumnName = "id")
-	Cadastro cadastro;
+	Cadastro cadastro = new Cadastro();
 	
 	
 	
-	@ManyToMany
-	@JoinTable(name = "tb_locacao_locacaoItem",
+	
+	/*@JoinTable(name = "tb_locacao_locacaoItem",
 	joinColumns = @JoinColumn(name = "locacao_id" ),
-	inverseJoinColumns = @JoinColumn(name = "locacaoItem_id"))
-	
-	Set<LocacaoItem> locacaoitems = new HashSet<LocacaoItem>(); 
+	inverseJoinColumns = @JoinColumn(name = "locacaoItem_id"))*/
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
+	LocacaoItem locacaoitem = new LocacaoItem();
  	
 	
+	public LocacaoStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(LocacaoStatus status) {
+		this.status = status;
+	}
+
+	public Cadastro getCadastro() {
+		return cadastro;
+	}
+
+	public void setCadastro(Cadastro cadastro) {
+		this.cadastro = cadastro;
+	}
+
+	public LocacaoItem getLocacaoitem() {
+		return locacaoitem;
+	}
+
+	public void setLocacaoitem(LocacaoItem locacaoitem) {
+		this.locacaoitem = locacaoitem;
+	}
+
 	public Locacao() {
 		
 	}

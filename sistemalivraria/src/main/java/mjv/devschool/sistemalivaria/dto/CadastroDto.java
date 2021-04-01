@@ -47,7 +47,13 @@ public class CadastroDto implements Serializable{
 		this.telefone = entidade.getTelefone();
 		this.login = entidade.getLogin();
 		this.senha = entidade.getSenha();
-
+		this.enderecoDto.setId(entidade.getEndereco().getId());
+		this.enderecoDto.setCep(entidade.getEndereco().getCep());
+		this.enderecoDto.setLogradouro(entidade.getEndereco().getLogradouro());
+		this.enderecoDto.setBairro(entidade.getEndereco().getBairro());
+		this.enderecoDto.setLocalidade(entidade.getEndereco().getLocalidade());
+		this.enderecoDto.setUf(entidade.getEndereco().getUf());
+		this.enderecoDto.setIbge(entidade.getEndereco().getIbge());
 		
 	}
 	
@@ -58,8 +64,8 @@ public class CadastroDto implements Serializable{
 	}
 
 	public void setEnderecoDto(EnderecoDto enderecoDto) {
-		EnderecoDto end = new EnderecoDto();
-		end.setBairro(enderecoDto.getBairro());
+	     	
+		this.enderecoDto = enderecoDto;
 		
 	}
 

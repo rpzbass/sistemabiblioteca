@@ -2,10 +2,14 @@ package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,12 +20,15 @@ public class Livro implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name ="id")
 	private Long id;
     
 	private String isbn;
+	private String titulo;
 	private Double valorDiaria;
 	private Integer exemplares;
 	private Integer reservados;
+	
 	
 	
 	public Livro() {
@@ -29,16 +36,25 @@ public class Livro implements Serializable {
 		
 	}
 	
-	public Livro(Long id, String isbn, Double valorDiaria, Integer exemplares, Integer reservados) {
+	public Livro(Long id, String isbn,String titulo, Double valorDiaria, Integer exemplares, Integer reservados) {
 		
 		this.id = id;
 		this.isbn = isbn;
+		this.titulo = titulo;
 		this.valorDiaria = valorDiaria;
 		this.exemplares = exemplares;
 		this.reservados = reservados;
 	}
 
 	
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
 	public Long getId() {
 		return id;
 	}

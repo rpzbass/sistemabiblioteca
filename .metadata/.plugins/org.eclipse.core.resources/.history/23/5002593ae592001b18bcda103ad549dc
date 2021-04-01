@@ -1,0 +1,5 @@
+package mjv.devschool.sistemalivaria.dto;
+
+public class LivroDto {
+
+}
