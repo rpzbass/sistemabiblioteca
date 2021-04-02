@@ -38,7 +38,7 @@ public class LocacaoItem implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "livros_id")
-	List<Livro> livros = new ArrayList<>();
+	Livro livro = new Livro();
 	
 	public LocacaoItem() {
 		
