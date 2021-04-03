@@ -1,0 +1,5 @@
+package mjv.devschool.sistemalivaria.client;
+
+public class ViaCEPClient {
+
+}

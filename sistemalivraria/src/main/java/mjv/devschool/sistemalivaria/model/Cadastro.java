@@ -59,7 +59,7 @@ public class Cadastro  implements Serializable {
 	}
 
 	public void setEndereco(Endereco endereco) {
-	   this.getEndereco().setBairro(endereco.getBairro());
+	  this.endereco = endereco;
 	  
 	}
 	

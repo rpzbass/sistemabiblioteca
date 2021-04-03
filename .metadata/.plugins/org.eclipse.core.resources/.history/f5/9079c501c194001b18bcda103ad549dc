@@ -1,0 +1,14 @@
+package mjv.devschool.sistemalivaria.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import mjv.devschool.sistemalivaria.model.Endereco;
+
+@FeignClient(url="https://viacep.com.br/ws/")
+public interface ViaCEPClient {
+	
+	@GetMapping("{cep}/json")
+	Endereco buscaEnderecoPorCep(String cep);
+
+}

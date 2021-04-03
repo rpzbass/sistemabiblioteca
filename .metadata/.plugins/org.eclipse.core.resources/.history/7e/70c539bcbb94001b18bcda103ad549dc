@@ -1,0 +1,14 @@
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableFeignClient
+public class SistemalivrariaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SistemalivrariaApplication.class, args);
+	}
+
+}
