@@ -30,8 +30,6 @@ public class LocacaoService  {
 		Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());
 		
 		locacao.setCadastro(cad);
-		
-		locacao = locRepository.save(locacao);
 			
 		return new LocacaoDto(locacao);
 		

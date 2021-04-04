@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 
 import mjv.devschool.sistemalivaria.model.Locacao;
-import mjv.devschool.sistemalivaria.model.LocacaoStatus;
 
 public class LocacaoDto implements Serializable {
 
@@ -21,7 +20,6 @@ public class LocacaoDto implements Serializable {
 	private Date dataRetirada;
 	private Date finalizacao;
 	private Double valorTotal;
-	private LocacaoStatus status;
 	
 	CadastroDto cadastroDto = new CadastroDto();
 	
@@ -50,14 +48,14 @@ public class LocacaoDto implements Serializable {
 		
 	}
 	
-	public LocacaoDto(Long id,Date dataAgendamento,Date dataRetirada, Date finalizacao,Double valorTotal,LocacaoStatus status) {
+	public LocacaoDto(Long id,Date dataAgendamento,Date dataRetirada, Date finalizacao,Double valorTotal) {
 		
 		this.id = id;
 		this.dataAgendamento = dataAgendamento;
 		this.dataRetirada = dataRetirada;
 		this.finalizacao = finalizacao;
 		this.valorTotal = valorTotal;
-		this.status = status;
+		
 	}
 	
 	public LocacaoDto(Locacao entidade) {
@@ -67,20 +65,10 @@ public class LocacaoDto implements Serializable {
 		this.dataRetirada = entidade.getDataRetirada();
 		this.finalizacao = entidade.getFinalizacao();
 		this.valorTotal = entidade.getValorTotal();
-		this.status = entidade.getStatus();
-		this.getCadastroDto().setId(entidade.getCadastro().getId());
-		this.getCadastroDto().setLogin(entidade.getCadastro().getLogin());
-		this.getCadastroDto().getEnderecoDto().setBairro(entidade.getCadastro().getEndereco().getBairro());
 		
 	}
 
-	public LocacaoDto(Date dataAgendamento,LocacaoStatus status, Double valorTotal) {
-		
-		this.dataAgendamento = dataAgendamento;
-		this.status = status;
-		this.valorTotal = valorTotal;
-		
-	}
+	
 	
 	public Long getId() {
 		return id;

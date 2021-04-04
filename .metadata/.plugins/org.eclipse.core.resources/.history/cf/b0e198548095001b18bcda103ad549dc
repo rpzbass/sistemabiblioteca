@@ -4,7 +4,6 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import mjv.devschool.sistemalivaria.dto.LocacaoDto;
 import mjv.devschool.sistemalivaria.model.Cadastro;
@@ -22,17 +21,17 @@ public class LocacaoService  {
 	@Autowired
 	LocacaoRepository locRepository;
 	
-	@Transactional
+	
 	public LocacaoDto  gerarLocacao(LocacaoDto locDto) {
 	
 		Locacao locacao = new Locacao(new Date(),LocacaoStatus.RESERVADO,0.0);
 		
-		Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());
+		Cadastro cadastro = cadRepository.getOne(locDto.getCadastroDto().getId());
 		
-		locacao.setCadastro(cad);
+		locacao.setCadastro(cadastro);
 		
-		locacao = locRepository.save(locacao);
-			
+		locRepository.save(locacao);
+		
 		return new LocacaoDto(locacao);
 		
 	}

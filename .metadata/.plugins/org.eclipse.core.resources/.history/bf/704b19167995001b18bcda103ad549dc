@@ -26,9 +26,9 @@ public class LocacaoResource {
 		
 		locdto = locservice.gerarLocacao(locdto);
 		
-	    URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(locdto.getId()).toUri();
+	    URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 		
-		return ResponseEntity.created(uri).body(locdto);
+		return ResponseEntity.created(uri).body(dto);
 
 	}
 	

@@ -68,9 +68,6 @@ public class LocacaoDto implements Serializable {
 		this.finalizacao = entidade.getFinalizacao();
 		this.valorTotal = entidade.getValorTotal();
 		this.status = entidade.getStatus();
-		this.getCadastroDto().setId(entidade.getCadastro().getId());
-		this.getCadastroDto().setLogin(entidade.getCadastro().getLogin());
-		this.getCadastroDto().getEnderecoDto().setBairro(entidade.getCadastro().getEndereco().getBairro());
 		
 	}
 

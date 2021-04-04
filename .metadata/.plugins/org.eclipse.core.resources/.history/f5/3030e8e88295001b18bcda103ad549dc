@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import mjv.devschool.sistemalivaria.dto.CadastroDto;
 import mjv.devschool.sistemalivaria.dto.LocacaoDto;
-import mjv.devschool.sistemalivaria.model.Cadastro;
 import mjv.devschool.sistemalivaria.model.Locacao;
 import mjv.devschool.sistemalivaria.model.LocacaoStatus;
 import mjv.devschool.sistemalivaria.repositorie.CadastroRepository;
@@ -25,15 +25,15 @@ public class LocacaoService  {
 	@Transactional
 	public LocacaoDto  gerarLocacao(LocacaoDto locDto) {
 	
-		Locacao locacao = new Locacao(new Date(),LocacaoStatus.RESERVADO,0.0);
+		LocacaoDto locacaoDto = new Locacao(new Date(),LocacaoStatus.RESERVADO,0.0);
 		
-		Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());
+		CadastroDto cadDto = cadRepository.findById(locDto.getCadastroDto().getId());
 		
-		locacao.setCadastro(cad);
+		locacaoDto.setCadastroDto(cadDto);
 		
-		locacao = locRepository.save(locacao);
-			
-		return new LocacaoDto(locacao);
+		locRepository.save(locacaoDto);
+		
+		return new LocacaoDto(locacaoDto);
 		
 	}
 	

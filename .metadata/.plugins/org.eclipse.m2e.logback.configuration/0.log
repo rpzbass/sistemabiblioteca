@@ -6526,3 +6526,115 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2021-04-04 15:45:20,140 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-04-04 15:45:20,140 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-04-04 15:45:20,142 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 15:45:20,169 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 15:45:20,171 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 15:45:20,171 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 15:45:20,172 [Worker-877: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 16:04:23,349 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:04:23,350 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:04:23,352 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 16:04:23,381 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 16:04:23,384 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:04:23,384 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:04:23,384 [Worker-889: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 16:07:38,092 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:07:38,093 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:07:38,096 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 16:07:38,125 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 16:07:38,128 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:07:38,128 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:07:38,128 [Worker-887: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 16:08:06,939 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:08:06,939 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:08:06,941 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 16:08:06,968 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 16:08:06,970 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 16:08:06,970 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 16:08:06,970 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 17:00:10,087 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:00:10,087 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:00:10,090 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 17:00:10,256 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 17:00:10,259 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:00:10,259 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:00:10,259 [Worker-892: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 17:10:51,731 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:10:51,731 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:10:51,733 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 17:10:51,837 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 17:10:51,840 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:10:51,840 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:10:51,840 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 17:11:08,223 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:11:08,223 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:11:08,226 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 17:11:08,254 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 17:11:08,257 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:11:08,257 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:11:08,258 [Worker-900: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 17:14:25,507 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:14:25,507 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:14:25,509 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 17:14:25,565 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 17:14:25,569 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:14:25,569 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:14:25,569 [Worker-896: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 17:18:26,174 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:18:26,175 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:18:26,177 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 17:18:26,214 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 17:18:26,216 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 17:18:26,217 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 17:18:26,217 [Worker-897: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 18:45:11,779 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:45:11,780 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:45:11,783 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 18:45:11,921 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 18:45:11,924 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:45:11,925 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:45:11,925 [Worker-905: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 18:55:12,472 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:55:12,472 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:55:12,475 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 18:55:12,538 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 18:55:12,540 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:55:12,540 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:55:12,541 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 18:59:22,276 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:59:22,276 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:59:22,278 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 18:59:22,305 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 18:59:22,307 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 18:59:22,307 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 18:59:22,307 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 19:03:28,349 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:03:28,350 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:03:28,353 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 19:03:28,408 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 19:03:28,415 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:03:28,416 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:03:28,417 [Worker-890: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 19:12:52,525 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:12:52,525 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:12:52,530 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 19:12:52,557 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 19:12:52,559 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:12:52,559 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:12:52,559 [Worker-919: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 19:20:24,818 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:20:24,818 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:20:24,821 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 19:20:24,877 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 19:20:24,879 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:20:24,879 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:20:24,879 [Worker-922: Launching sistemalivraria - SistemalivrariaApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 19:22:07,188 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:22:07,188 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:22:07,190 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-04 19:22:07,276 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-04 19:22:07,277 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:22:07,278 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:22:07,278 [Worker-929: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Marvis\Desktop\DevSchool\spring\sistemalivraria\src\test\resources
+2021-04-04 19:36:51,156 [Worker-935: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-04 19:36:51,157 [Worker-935: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-04 19:36:51,159 [Worker-935: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
