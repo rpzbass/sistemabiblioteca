@@ -1,0 +1,19 @@
+package mjv.devschool.sistemalivaria.service;
+
+import org.springframework.stereotype.Service;
+
+import mjv.devschool.sistemalivaria.dto.LocacaoDto;
+
+@Service
+public class LocacaoService  {
+
+	
+	
+	
+	public LocacaoDto  gerarLocacao() {
+		return null;
+		
+	}
+	
+	
+}

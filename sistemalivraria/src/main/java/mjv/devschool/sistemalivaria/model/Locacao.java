@@ -1,7 +1,9 @@
 package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,7 +34,7 @@ public class Locacao implements Serializable {
 	private Date finalizacao;
 	private Double valorTotal;
 	
-	private LocacaoStatus status = LocacaoStatus.RESERVADO;
+	private LocacaoStatus status;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cadastro_id",referencedColumnName = "id")
@@ -43,9 +46,16 @@ public class Locacao implements Serializable {
 	/*@JoinTable(name = "tb_locacao_locacaoItem",
 	joinColumns = @JoinColumn(name = "locacao_id" ),
 	inverseJoinColumns = @JoinColumn(name = "locacaoItem_id"))*/
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
-	LocacaoItem locacaoitem = new LocacaoItem();
+	
+	/*@ManyToMany
+	@JoinTable(name = "tb_locacao_locacaoItems",
+		joinColumns = @JoinColumn(name = "locacao_id"), 
+		inverseJoinColumns = @JoinColumn(name = "locacaoItems_id"))
+	//@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
+	*/
+	@OneToMany
+	@JoinColumn(name = "id")
+	List<LocacaoItem> locacaoItem = new ArrayList<>();
  	
 	
 	public LocacaoStatus getStatus() {
@@ -64,17 +74,18 @@ public class Locacao implements Serializable {
 		this.cadastro = cadastro;
 	}
 
-	public LocacaoItem getLocacaoitem() {
-		return locacaoitem;
+	public List<LocacaoItem> getLocacaoItem() {
+		return locacaoItem;
 	}
 
-	public void setLocacaoitem(LocacaoItem locacaoitem) {
-		this.locacaoitem = locacaoitem;
+	public void setLocacaoItem(List<LocacaoItem> locacaoItem) {
+		this.locacaoItem = locacaoItem;
 	}
 
 	public Locacao() {
 		
 	}
+	
 	
 	public Locacao(Long id, Date dataAgendamento, Date dataRetirada, Date finalizacao, Double valorTotal , LocacaoStatus status ) {
 	
@@ -85,7 +96,14 @@ public class Locacao implements Serializable {
 		this.valorTotal = valorTotal;
 		this.status = status;
 	}
-
+	
+	public Locacao(Date dataAgendamento,LocacaoStatus status, Double valorTotal) {
+		
+		this.dataAgendamento = dataAgendamento;
+		this.status = status;
+		this.valorTotal = valorTotal;
+		
+	}
 	
 	public Long getId() {
 		return id;
@@ -96,7 +114,8 @@ public class Locacao implements Serializable {
 	}
 
 	public Date getDataAgendamento() {
-		return dataAgendamento;
+		
+		return new Date();
 	}
 
 	public void setDataAgendamento(Date dataAgendamento) {
@@ -120,6 +139,7 @@ public class Locacao implements Serializable {
 	}
 
 	public Double getValorTotal() {
+		this.valorTotal = 0.0;
 		return valorTotal;
 	}
 

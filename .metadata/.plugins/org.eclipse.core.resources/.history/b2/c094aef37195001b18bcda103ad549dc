@@ -1,0 +1,31 @@
+package mjv.devschool.sistemalivaria.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import mjv.devschool.sistemalivaria.dto.LocacaoDto;
+import mjv.devschool.sistemalivaria.model.Cadastro;
+import mjv.devschool.sistemalivaria.model.Locacao;
+import mjv.devschool.sistemalivaria.repositorie.CadastroRepository;
+
+@Service
+public class LocacaoService  {
+
+	@Autowired   //notação para injecao de classe que facilita a modularização e acoplamento no codigo
+	CadastroRepository cadRepository;
+	
+	
+	public LocacaoDto  gerarLocacao(LocacaoDto locDto) {
+	
+		Locacao loc = new Locacao();
+		
+		Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());
+		
+		//loc.getLocacaoItem().add()
+			return null;
+		
+		
+	}
+	
+	
+}

@@ -51,9 +51,7 @@ public class CadastroService {
 		entidade.setLogin(dto.getLogin());
 		entidade.setSenha(dto.getSenha());
 		
-		
 		RestTemplate template = new RestTemplate();
-		
 		entidade.setEndereco(template.getForObject("https://viacep.com.br/ws/{cep}/json",Endereco.class,dto.getEnderecoDto().getCep()));
 		
 	

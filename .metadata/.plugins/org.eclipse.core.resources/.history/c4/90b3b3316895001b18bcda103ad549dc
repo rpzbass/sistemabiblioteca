@@ -1,0 +1,31 @@
+package mjv.devschool.sistemalivaria.dto;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class LocacaoDto implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Long id;
+	
+	private Date dataAgendamento;
+	private Date dataRetirada;
+	private Date finalizacao;
+	private Double valorTotal;
+	
+	
+	public LocacaoDto() {
+		
+		
+	}
+	
+	
+	
+	
+		
+		
+}
