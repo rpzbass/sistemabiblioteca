@@ -45,16 +45,10 @@ public class LocacaoService  {
 			Livro livro = livroRepository.getOne(linha.getLivroDto().getId()); 
 			LocacaoItem item = new LocacaoItem();
 			item.setLivro(livro);
-			
 			item.setDataEntrega(linha.getDataPrevisaoEntrega());
 			item.setValorDiaria(linha.getLivroDto().getValorDiaria());
-			item.setDiarias(calcDiarias(locacao.getDataRetirada(),linha.getDataPrevisaoEntrega()));
-			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
 			
-			locacao.getLocacaoItem().add(item);
-			livro.incrementarReservado();
-		    
-			livroRepository.save(livro);
+			
 		}
 		
 		locacao = locRepository.save(locacao);

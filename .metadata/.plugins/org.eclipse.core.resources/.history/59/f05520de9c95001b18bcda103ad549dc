@@ -69,20 +69,8 @@ public class LocacaoDto implements Serializable {
 		this.valorTotal = entidade.getValorTotal();
 		this.status = entidade.getStatus();
 		this.getCadastroDto().setId(entidade.getCadastro().getId());
-		this.getCadastroDto().setNome(entidade.getCadastro().getNome());
-		this.getCadastroDto().setCpf("*******");
-		this.getCadastroDto().setEmail(entidade.getCadastro().getEmail());
-		this.getCadastroDto().setTelefone("********");
-		this.getCadastroDto().setLogin("********");
-		this.getCadastroDto().setSenha("********");
-		this.getCadastroDto().getEnderecoDto().setId(entidade.getCadastro().getEndereco().getId());
+		this.getCadastroDto().setLogin(entidade.getCadastro().getLogin());
 		this.getCadastroDto().getEnderecoDto().setBairro(entidade.getCadastro().getEndereco().getBairro());
-		this.getCadastroDto().getEnderecoDto().setCep(entidade.getCadastro().getEndereco().getCep());
-		this.getCadastroDto().getEnderecoDto().setLogradouro("********");
-		this.getCadastroDto().getEnderecoDto().setLocalidade("********");
-		this.getCadastroDto().getEnderecoDto().setUf(entidade.getCadastro().getEndereco().getUf());
-		this.getCadastroDto().getEnderecoDto().setIbge(entidade.getCadastro().getEndereco().getIbge());
-		
 		
 	}
 

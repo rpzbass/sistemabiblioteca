@@ -96,7 +96,6 @@ public class Livro implements Serializable {
 	public void incrementarReservado() {
 		
 		this.reservados++;
-		this.exemplares--;
 	}
 	
 	public void decrementarReservado() {
@@ -104,7 +103,6 @@ public class Livro implements Serializable {
 		if(this.reservados > 0) {
 			
 			this.reservados--;
-			this.exemplares++;	
 		}
 			
 	}

@@ -1,17 +1,29 @@
-package mjv.devschool.sistemalivaria.dto;
+package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import mjv.devschool.sistemalivaria.model.Livro;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-public class LocacaoItemDto implements Serializable {
 
-	/**
-	 * 
-	 */
+
+@Entity
+@Table(name = "tb_locacaoitem")
+public class LocacaoItem implements Serializable {
+
+	
+
 	private static final long serialVersionUID = 1L;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name ="id")
 	private Long id;
 	
 	private Date dataPrevisaoEntrega;
@@ -21,21 +33,16 @@ public class LocacaoItemDto implements Serializable {
 	private Double valorLocacao;
 	
 	
-	public LivroDto getLivroDto() {
-		return livroDto;
-	}
-
-	public void setLivroDto(LivroDto livroDto) {
-		this.livroDto = livroDto;
-	}
-
-	LivroDto livroDto = new LivroDto();
 	
-	public LocacaoItemDto() {
+	@ManyToOne
+	@JoinColumn(name = "livros_id")
+	Livro livro = new Livro();
+	
+	public LocacaoItem() {
 		
 	}
-	
-	public LocacaoItemDto(Long id, Date dataPrevisaoEntrega,Date dataEntrega,Integer diarias, Double valorDiaria,Double valorLocacao) {
+
+	public LocacaoItem(Long id, Date dataPrevisaoEntrega, Date dataEntrega, Integer diarias, Double valorDiaria, Double valorLocacao) {
 		
 		this.id = id;
 		this.dataPrevisaoEntrega = dataPrevisaoEntrega;
@@ -43,12 +50,8 @@ public class LocacaoItemDto implements Serializable {
 		this.diarias = diarias;
 		this.valorDiaria = valorDiaria;
 		this.valorLocacao = valorLocacao;
-		
 	}
 
-	
-	
-	
 	public Long getId() {
 		return id;
 	}
@@ -96,8 +99,6 @@ public class LocacaoItemDto implements Serializable {
 	public void setValorLocacao(Double valorLocacao) {
 		this.valorLocacao = valorLocacao;
 	}
-	
-	
 	
 	
 	

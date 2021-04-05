@@ -19,7 +19,7 @@ public class Livro implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="id")
 	private Long id;
-	@Column(columnDefinition = "TEXT")
+    
 	private String isbn;
 	private String titulo;
 	private Double valorDiaria;
@@ -93,21 +93,7 @@ public class Livro implements Serializable {
 		this.reservados = reservados;
 	}
 	
-	public void incrementarReservado() {
-		
-		this.reservados++;
-		this.exemplares--;
-	}
 	
-	public void decrementarReservado() {
-		
-		if(this.reservados > 0) {
-			
-			this.reservados--;
-			this.exemplares++;	
-		}
-			
-	}
 	
 	
 	

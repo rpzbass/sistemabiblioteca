@@ -1,6 +1,6 @@
 package mjv.devschool.sistemalivaria.service;
 
-import java.time.LocalDate;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -35,26 +35,22 @@ public class LocacaoService  {
 	public LocacaoDto  gerarLocacao(LocacaoDto locDto) {
 		 
 		 Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());		
-		 Locacao locacao = new Locacao(new Date(),LocacaoStatus.RESERVADO,0.0);	 
+		 Locacao locacao = new Locacao(new Date(),LocacaoStatus.RESERVADO,0.0);
+		 SimpleDateFormat spf = new SimpleDateFormat("dd-MM-yyyy");
 		 
-		 
-		 
+		 Date data = spf.parse("1999-12-07");
+		
 		locacao.setCadastro(cad);
 
-		for(LocacaoItemDto linha: locDto.getLocacaoitemsdto()){
+		for(LocacaoItemDto linha: locDto.getLocacaoitemsdto()) {
+			
 			Livro livro = livroRepository.getOne(linha.getLivroDto().getId()); 
 			LocacaoItem item = new LocacaoItem();
 			item.setLivro(livro);
-			
 			item.setDataEntrega(linha.getDataPrevisaoEntrega());
 			item.setValorDiaria(linha.getLivroDto().getValorDiaria());
-			item.setDiarias(calcDiarias(locacao.getDataRetirada(),linha.getDataPrevisaoEntrega()));
-			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
 			
-			locacao.getLocacaoItem().add(item);
-			livro.incrementarReservado();
-		    
-			livroRepository.save(livro);
+			
 		}
 		
 		locacao = locRepository.save(locacao);

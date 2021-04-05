@@ -21,14 +21,6 @@ public class LocacaoItemDto implements Serializable {
 	private Double valorLocacao;
 	
 	
-	public LivroDto getLivroDto() {
-		return livroDto;
-	}
-
-	public void setLivroDto(LivroDto livroDto) {
-		this.livroDto = livroDto;
-	}
-
 	LivroDto livroDto = new LivroDto();
 	
 	public LocacaoItemDto() {

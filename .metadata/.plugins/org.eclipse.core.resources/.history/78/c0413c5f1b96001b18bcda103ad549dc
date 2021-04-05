@@ -51,10 +51,8 @@ public class LocacaoService  {
 			item.setDiarias(calcDiarias(locacao.getDataRetirada(),linha.getDataPrevisaoEntrega()));
 			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
 			
-			locacao.getLocacaoItem().add(item);
-			livro.incrementarReservado();
-		    
-			livroRepository.save(livro);
+			locacao.setLocacaoItem(item);
+		
 		}
 		
 		locacao = locRepository.save(locacao);

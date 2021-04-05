@@ -75,7 +75,6 @@ public class LocacaoDto implements Serializable {
 		this.getCadastroDto().setTelefone("********");
 		this.getCadastroDto().setLogin("********");
 		this.getCadastroDto().setSenha("********");
-		this.getCadastroDto().getEnderecoDto().setId(entidade.getCadastro().getEndereco().getId());
 		this.getCadastroDto().getEnderecoDto().setBairro(entidade.getCadastro().getEndereco().getBairro());
 		this.getCadastroDto().getEnderecoDto().setCep(entidade.getCadastro().getEndereco().getCep());
 		this.getCadastroDto().getEnderecoDto().setLogradouro("********");
