@@ -40,8 +40,6 @@ public class CadastroService {
 		
 	}
 	
-	
-	
 	private void cpDtoParaEntidade(CadastroDto dto, Cadastro entidade ) {
 		
 		entidade.setNome(dto.getNome());

@@ -2,7 +2,11 @@ package mjv.devschool.sistemalivaria.model;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Date;
+import java.util.Date;
 import java.util.Date;
 import java.util.List;
 
@@ -42,7 +46,7 @@ public class Locacao implements Serializable {
 	Cadastro cadastro = new Cadastro();
 	
 	
-	SimpleDateFormat spf = new SimpleDateFormat("dd/MM/yyyy");
+	//SimpleDateFormat spf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	/*@JoinTable(name = "tb_locacao_locacaoItem",
 	joinColumns = @JoinColumn(name = "locacao_id" ),
@@ -54,7 +58,7 @@ public class Locacao implements Serializable {
 		inverseJoinColumns = @JoinColumn(name = "locacaoItems_id"))
 	//@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
 	*/
-	@OneToMany
+	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id")
 	List<LocacaoItem> locacaoItem = new ArrayList<>();
  	

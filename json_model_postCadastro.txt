@@ -1,0 +1,11 @@
+{
+  "cpf": "021565454",
+  "email": "teste@teste",
+  "enderecoDto": {
+    "cep": "82980090"
+      },
+  "login": "meulogin",
+  "nome": "zerobass",
+  "senha": "12345",
+  "telefone": "041999545690"
+}

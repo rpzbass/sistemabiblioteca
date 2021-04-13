@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LocacaoRepository.java&apos; to &apos;mjv.devschool.sistemalivaria.repositorie.LocacaoRepository.java&apos;&#x0D;&#x0A;- Original project: &apos;sistemalivraria&apos;&#x0D;&#x0A;- Destination element: &apos;mjv.devschool.sistemalivaria.repositorie.LocacaoRepository.java&apos;&#x0D;&#x0A;- Original element: &apos;mjv.devschool.sistemalivaria.repositorie.LocacaoRepository.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;mjv.devschool.sistemalivaria.repositorie{LocacaoRepository.java" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;mjv.devschool.sistemalivaria.repositorie{LocacaoRepository.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1618342636189" units="1" version="1.0"/>
+</session>

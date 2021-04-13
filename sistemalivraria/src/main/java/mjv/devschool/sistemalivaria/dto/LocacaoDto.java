@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import mjv.devschool.sistemalivaria.model.Locacao;
+import mjv.devschool.sistemalivaria.model.LocacaoItem;
 import mjv.devschool.sistemalivaria.model.LocacaoStatus;
 
 public class LocacaoDto implements Serializable {
@@ -82,6 +83,8 @@ public class LocacaoDto implements Serializable {
 		this.getCadastroDto().getEnderecoDto().setLocalidade("********");
 		this.getCadastroDto().getEnderecoDto().setUf(entidade.getCadastro().getEndereco().getUf());
 		this.getCadastroDto().getEnderecoDto().setIbge(entidade.getCadastro().getEndereco().getIbge());
+		
+		
 		
 		
 	}

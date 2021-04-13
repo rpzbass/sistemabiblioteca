@@ -28,7 +28,7 @@ public class LocacaoItem implements Serializable {
 	
 	private Date dataPrevisaoEntrega;
 	private Date dataEntrega;
-	private long diarias;
+	private Long diarias;
 	private Double valorDiaria;
 	private Double valorLocacao;
 	
@@ -43,7 +43,7 @@ public class LocacaoItem implements Serializable {
 		
 	}
 
-	public LocacaoItem(Long id, Date dataPrevisaoEntrega, Date dataEntrega, long diarias, Double valorDiaria, Double valorLocacao) {
+	public LocacaoItem(Long id, Date dataPrevisaoEntrega, Date dataEntrega, Long diarias, Double valorDiaria, Double valorLocacao) {
 		
 		this.id = id;
 		this.dataPrevisaoEntrega = dataPrevisaoEntrega;
