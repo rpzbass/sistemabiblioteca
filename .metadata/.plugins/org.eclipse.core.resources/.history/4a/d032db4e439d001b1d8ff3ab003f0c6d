@@ -147,6 +147,7 @@ public class Locacao implements Serializable {
 	}
 
 	public Double getValorTotal() {
+		this.valorTotal = 0.0;
 		return valorTotal;
 	}
 

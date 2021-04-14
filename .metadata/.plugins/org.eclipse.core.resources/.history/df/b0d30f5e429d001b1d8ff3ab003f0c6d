@@ -50,10 +50,10 @@ public class LocacaoService {
 			item.setValorDiaria(livro.getValorDiaria());
 			item.setDiarias(calcDiarias(locDto.getDataRetirada(),item.getDataPrevisaoEntrega()));
 			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
-			locacao.setValorTotal(item.getValorLocacao());
+
 			locacao.getLocacaoItem().add(item);
 			livro.incrementarReservado();
-			
+
 			
 		}
 
@@ -71,7 +71,5 @@ public class LocacaoService {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
 	}
-	
-	
 
 }
