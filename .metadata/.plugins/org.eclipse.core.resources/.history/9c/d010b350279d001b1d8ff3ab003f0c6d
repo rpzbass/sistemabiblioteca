@@ -45,10 +45,9 @@ public class LocacaoService {
 			LocacaoItem item = new LocacaoItem();
 
 			item.setLivro(livro);
-			item.setDataPrevisaoEntrega(linha.getDataPrevisaoEntrega());
-			locacao.setDataRetirada(locDto.getDataRetirada());
+			item.setDataEntrega(linha.getDataPrevisaoEntrega());
 			item.setValorDiaria(livro.getValorDiaria());
-			item.setDiarias(calcDiarias(locDto.getDataRetirada(),item.getDataPrevisaoEntrega()));
+			item.setDiarias(calcDiarias(locDto.getDataRetirada(),linha.getDataPrevisaoEntrega()));
 			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
 
 			locacao.getLocacaoItem().add(item);
@@ -66,7 +65,7 @@ public class LocacaoService {
 
 	public long calcDiarias(Date dataRetirada, Date dataPrevisaoEntrega) {
 
-		long diff =  dataPrevisaoEntrega.getTime() - dataRetirada.getTime();
+		long diff = dataRetirada.getTime() - dataPrevisaoEntrega.getTime();
 
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 

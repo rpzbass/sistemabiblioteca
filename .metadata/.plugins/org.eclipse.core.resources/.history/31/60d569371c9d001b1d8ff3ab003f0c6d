@@ -41,7 +41,7 @@ public class Locacao implements Serializable {
 	
 	private LocacaoStatus status;
 	
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cadastro_id",referencedColumnName = "id")
 	Cadastro cadastro = new Cadastro();
 	
@@ -58,8 +58,8 @@ public class Locacao implements Serializable {
 		inverseJoinColumns = @JoinColumn(name = "locacaoItems_id"))
 	//@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
 	*/
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "locacaoItem_id",referencedColumnName="id")
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "id")
 	List<LocacaoItem> locacaoItem = new ArrayList<>();
  	
 	

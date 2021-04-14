@@ -58,7 +58,7 @@ public class Locacao implements Serializable {
 		inverseJoinColumns = @JoinColumn(name = "locacaoItems_id"))
 	//@JoinColumn(name = "locacaoitem_id", referencedColumnName="id")
 	*/
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "locacaoItem_id",referencedColumnName="id")
 	List<LocacaoItem> locacaoItem = new ArrayList<>();
  	

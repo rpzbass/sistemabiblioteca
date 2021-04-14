@@ -66,7 +66,7 @@ public class LocacaoService {
 
 	public long calcDiarias(Date dataRetirada, Date dataPrevisaoEntrega) {
 
-		long diff =  dataPrevisaoEntrega.getTime() - dataRetirada.getTime();
+		long diff = dataRetirada.getTime() - dataPrevisaoEntrega.getTime();
 
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
