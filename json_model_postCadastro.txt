@@ -2,7 +2,7 @@
   "cpf": "021565454",
   "email": "teste@teste",
   "enderecoDto": {
-    "cep": "82980090"
+    "cep": "99999999"
       },
   "login": "meulogin",
   "nome": "zerobass",
