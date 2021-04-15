@@ -151,7 +151,7 @@ public class Locacao implements Serializable {
 	}
 
 	public void setValorTotal(Double valorTotal) {
-		this.valorTotal += valorTotal;
+		this.valorTotal = valorTotal;
 	}
 	
 	
