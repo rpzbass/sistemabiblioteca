@@ -22,6 +22,7 @@ import mjv.devschool.sistemalivaria.repositorie.LivroRespository;
 import mjv.devschool.sistemalivaria.repositorie.LocacaoRepository;
 import mjv.devschool.sistemalivaria.service.exceptions.EntityNotFoundExceptio;
 
+
 @Service
 public class LocacaoService {
 
@@ -37,61 +38,63 @@ public class LocacaoService {
 
 	@Transactional
 	public LocacaoDto gerarLocacao(LocacaoDto locDto) {
-
+		
 		try {
-
-			Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());
-			Locacao locacao = new Locacao(new Date(), LocacaoStatus.RESERVADO, 0.0);
-			locacao.setCadastro(cad);
-
-			for (LocacaoItemDto linha : locDto.getLocacaoitemsdto()) {
-
-				Livro livro = buscarLivroDisponivel(linha.getLivroDto().getId());
-				try {
-					if (!livro.getId().equals(null)) {
-
-						LocacaoItem item = new LocacaoItem();
-						item.setLivro(livro);
-						item.setDataPrevisaoEntrega(linha.getDataPrevisaoEntrega());
-						locacao.setDataRetirada(locDto.getDataRetirada());
-						item.setValorDiaria(livro.getValorDiaria());
-						item.setDiarias(calcDiarias(locDto.getDataRetirada(), item.getDataPrevisaoEntrega()));
-						item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
-						locacao.setValorTotal(calcValorTotal(item.getValorLocacao()));
-						locacao.getLocacaoItem().add(item);
-						livro.incrementarReservado();
-						locacao.setStatus(devolverLivro(locDto.getFinalizacao()));
-						locacao.setFinalizacao(locDto.getFinalizacao());
-					}
-				} catch (NullPointerException e) {
-					throw new EntityNotFoundExceptio("Exemplares esgotados");
-				}
-			}
-
-			locacao = locRepository.save(locacao);
-
-			return new LocacaoDto(locacao);
-
-		} catch (EntityNotFoundException e) {
-
-			throw new EntityNotFoundExceptio("Entidade não encontrada");
-
-		} catch (DataIntegrityViolationException e) {
-
-			throw new EntityNotFoundExceptio("Cadastro não encontrado");
-
+		
+		Cadastro cad = cadRepository.getOne(locDto.getCadastroDto().getId());	
+		Locacao locacao = new Locacao(new Date(), LocacaoStatus.RESERVADO, 0.0);
+		locacao.setCadastro(cad);
+		
+		for (LocacaoItemDto linha : locDto.getLocacaoitemsdto()) {
+			
+			Livro livro = buscarLivroDisponivel(linha.getLivroDto().getId());
+			
+			
+			LocacaoItem item = new LocacaoItem();
+			item.setLivro(livro);
+			item.setDataPrevisaoEntrega(linha.getDataPrevisaoEntrega());
+			locacao.setDataRetirada(locDto.getDataRetirada());
+			item.setValorDiaria(livro.getValorDiaria());
+			item.setDiarias(calcDiarias(locDto.getDataRetirada(), item.getDataPrevisaoEntrega()));
+			item.setValorLocacao(item.getDiarias() * item.getValorDiaria());
+			locacao.setValorTotal(calcValorTotal(item.getValorLocacao()));
+			locacao.getLocacaoItem().add(item);
+			livro.incrementarReservado();
+			locacao.setStatus(devolverLivro(locDto.getFinalizacao()));
+			locacao.setFinalizacao(locDto.getFinalizacao());
+		
 		}
+		
+		locacao = locRepository.save(locacao);
 
+		return new LocacaoDto(locacao);
+		
+		} catch (EntityNotFoundException e) {
+		  
+			
+			throw new EntityNotFoundExceptio("Entidade não encontrada");
+		
+			
+		} catch (DataIntegrityViolationException e) {
+			
+			throw new EntityNotFoundExceptio("Cadastro não encontrado");
+			
+		}
+	
 	}
 
+	
+	
 	protected Livro buscarLivroDisponivel(Long id) {
-
+		
 		Livro livro = livroRepository.getOne(id);
-
-		return (!livro.getExemplares().equals(0)) ? livro : null;
-
+		
+		return (!livro.getExemplares().equals(0))? livro: null ;
+		
+		
 	}
-
+	
+	
 	protected long calcDiarias(Date dataRetirada, Date dataPrevisaoEntrega) {
 
 		long diff = dataPrevisaoEntrega.getTime() - dataRetirada.getTime();
@@ -106,9 +109,12 @@ public class LocacaoService {
 	}
 
 	protected LocacaoStatus devolverLivro(Date data) {
-
-		return (!data.equals(null)) ? LocacaoStatus.DISPONIVEL : LocacaoStatus.RESERVADO;
-
+		
+		return  (!data.equals(null)) ?  LocacaoStatus.DISPONIVEL: LocacaoStatus.RESERVADO;
+		
 	}
-
+	
+	
+	
+	
 }
